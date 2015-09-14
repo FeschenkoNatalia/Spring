@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ua/kiev/prog/AppConfig.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ua/kiev/prog/MainController.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ua/kiev/prog/WebInitializer.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" charset="windows-1251" />
+  </component>
+</project>
