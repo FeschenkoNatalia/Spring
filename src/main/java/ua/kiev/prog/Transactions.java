@@ -8,7 +8,7 @@ import java.util.Date;
 public class Transactions {
     @Id
     @GeneratedValue
-    private long id;
+    private int id;
 
     private String transaction_date;
 
@@ -16,33 +16,29 @@ public class Transactions {
 
     private String transaction_desc;
 
-    @OneToOne(cascade=CascadeType.ALL)
-    //@OneToMany (cascade = CascadeType.ALL, mappedBy = "transactionses")
-    //@ManyToOne (cascade = CascadeType.ALL)
+    /*@OneToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "sourcetypes_id")
-    private SourceTypes sourcetypes;
+    private Sourcetypes sourcetypes;*/
 
     @OneToOne(cascade=CascadeType.ALL)
-    //@OneToMany (cascade=CascadeType.ALL, mappedBy = "transactionses")
-    //@ManyToOne (cascade = CascadeType.ALL)
     @JoinColumn(name = "transactionstypes_id")
-    private TransactionsTypes transactionstypes;
+    private Transactionstypes transactionstypes;
 
     public Transactions() {}
 
-    public Transactions(String transaction_date, double transaction_sum, String transaction_desc, SourceTypes sourcetypes, TransactionsTypes transactionstypes) {
+    public Transactions(String transaction_date, double transaction_sum, String transaction_desc, Transactionstypes transactionstypes) {
         this.transaction_date = transaction_date;
         this.transaction_sum = transaction_sum;
         this.transaction_desc = transaction_desc;
-        this.sourcetypes = sourcetypes;
+       // this.sourcetypes = sourcetypes;
         this.transactionstypes = transactionstypes;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -70,19 +66,19 @@ public class Transactions {
         this.transaction_desc = transaction_desc;
     }
 
-    public SourceTypes getSourcetypes() {
-        return sourcetypes;
+    /*public Sourcetypes getSourcetypes() {
+    return sourcetypes;
     }
 
-    public void setSourcetypes(SourceTypes sourcetypes) {
-        this.sourcetypes = sourcetypes;
-    }
+    public void setSourcetypes(Sourcetypes sourcetypes) {
+      this.sourcetypes = sourcetypes;
+    }*/
 
-    public TransactionsTypes getTransactionstypes() {
+    public Transactionstypes getTransactionstypes() {
         return transactionstypes;
     }
 
-    public void setTransactionstypes(TransactionsTypes transactionstypes) {
+    public void setTransactionstypes(Transactionstypes transactionstypes) {
         this.transactionstypes = transactionstypes;
     }
 }

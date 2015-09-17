@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Date;
 
@@ -40,35 +41,22 @@ public class MainController {
 		return new ModelAndView("index", "trans", transDAO.list());
 	}
 
-	/*@RequestMapping("/image/{file_id}")
-	public void getFile(HttpServletRequest request, HttpServletResponse response, @PathVariable("file_id") long fileId) {
-		try {
-			byte[] content = advDAO.getPhoto(fileId);
-			response.setContentType("image/png");
-			response.getOutputStream().write(content);
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		}
-	}*/
-
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 		public ModelAndView addTrans(@RequestParam(value="transaction_date") String transaction_date,
-						 @RequestParam(value="transaction_sum") double transaction_sum,
-						 @RequestParam(value="transaction_desc", required=false) String transaction_desc,
-						 @RequestParam(value="sourcetypes") SourceTypes sourcetypes,
-			             @RequestParam(value="transactionstypes") TransactionsTypes transactionstypes,
-						 HttpServletRequest request,
-						 HttpServletResponse response)
-	{
+						 			 @RequestParam(value="transaction_sum") double transaction_sum,
+						 			 @RequestParam(value="transaction_desc", required=false) String transaction_desc,
+									 //@RequestParam(value="sourcetypes") Sourcetypes sourcetypes,
+									 @RequestParam(value="transactionstypes.type") Transactionstypes transactionstypes,
+									 HttpServletRequest request,
+									 HttpServletResponse response) {
 		//try {
-			Transactions trans = new Transactions(
-					transaction_date, transaction_sum, transaction_desc,
-					new SourceTypes(sourcetypes.getType(), sourcetypes.getSource_sum(),sourcetypes.getUsers()),
-					new TransactionsTypes(transactionstypes.getType()));
-			transDAO.add(trans);
-			return new ModelAndView("index", "trans", transDAO.list());
+		Transactions trans = new Transactions(transaction_date, transaction_sum, transaction_desc,
+				//new Sourcetypes(sourcetypes.getType(), sourcetypes.getSource_sum(), sourcetypes.getUsers()),
+				new Transactionstypes(transactionstypes.getType()));
+		transDAO.add(trans);
+		return new ModelAndView("index", "trans", transDAO.list());
 		//} catch (IOException ex) {
 		//	response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
 		//	return null;
-		}
+	}
 	}

@@ -1,18 +1,45 @@
-CREATE DATABASE Adv;
-USE Adv;
+mysql> USE Trans;
+Database changed
+mysql> describe transactions;
++----------------------+--------------+------+-----+---------+----------------+
+| Field                | Type         | Null | Key | Default | Extra          |
++----------------------+--------------+------+-----+---------+----------------+
+| id                   | int(11)      | NO   | PRI | NULL    | auto_increment |
+| transaction_date     | varchar(255) | YES  |     | NULL    |                |
+| transaction_desc     | varchar(255) | YES  |     | NULL    |                |
+| transaction_sum      | double       | NO   |     | NULL    |                |
+| sourcetypes_id       | bigint(20)   | YES  | MUL | NULL    |                |
+| transactionstypes_id | bigint(20)   | YES  | MUL | NULL    |                |
++----------------------+--------------+------+-----+---------+----------------+
+6 rows in set (0.01 sec)
 
-CREATE TABLE Advs (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    photo_id INT DEFAULT NULL,
-    name TEXT NOT NULL,
-    short_desc VARCHAR(100) NOT NULL,
-    long_desc VARCHAR(500) DEFAULT NULL,
-    phone VARCHAR(12) NOT NULL,
-    price DECIMAL NOT NULL
-);
+mysql> describe sourcetypes;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| source_sum | double       | YES  |     | NULL    |                |
+| type       | varchar(255) | YES  |     | NULL    |                |
+| user_id    | bigint(20)   | YES  | MUL | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
 
-CREATE TABLE Photos (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name TEXT NOT NULL,
-    body BLOB NOT NULL
-);
+mysql> describe transactionstypes;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| type  | varchar(255) | YES  |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+2 rows in set (0.01 sec)
+
+mysql> describe users;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id       | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| username | varchar(255) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+2 rows in set (0.01 sec)
+
+mysql>

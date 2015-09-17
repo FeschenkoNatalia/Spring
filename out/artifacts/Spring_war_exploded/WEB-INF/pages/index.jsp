@@ -21,19 +21,17 @@
             <td><b>transaction_date</b></td>
             <td><b>transaction_sum</b></td>
             <td><b>transaction_desc</b></td>
-            <td><b>sourcetypes</b></td>
-            <td><b>transactionstypes</b></td>
+            <td><b>transactionstypes.type</b></td>
             <td><b>Action</b></td>
         </tr>
         </thead>
-        <c:forEach items="${trans}" var="trans">
+        <c:forEach items="${transactions}" var="transactions">
             <tr>
-                <td>${trans.transaction_date}</td>
-                <td>${trans.transaction_sum}</td>
-                <td>${trans.transaction_desc}</td>
-                <td>${trans.sourcetypes.user_id}</td>
-                <td>${trans.transactionstypes.type}</td>
-                <td><a href="/delete?id=${trans.id}">Delete</a></td>
+                <td>${transactions.transaction_date}</td>
+                <td>${transactions.transaction_sum}</td>
+                <td>${transactions.transaction_desc}</td>
+                <td>${transactions.transactionstypes.type}</td>
+                <td><a href="/delete?id=${transactions.id}">Delete</a></td>
             </tr>
         </c:forEach>
     </table>

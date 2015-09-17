@@ -3,17 +3,17 @@ package ua.kiev.prog;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "TransactionsTypes")
-public class TransactionsTypes {
+@Table(name = "Transactionstypes")
+public class Transactionstypes {
     @Id
     @GeneratedValue
     private long id;
 
     private String type;
 
-    public TransactionsTypes() {}
+    public Transactionstypes() {}
 
-    public TransactionsTypes(String type) {
+    public Transactionstypes(String type) {
         this.type = type;
     }
 

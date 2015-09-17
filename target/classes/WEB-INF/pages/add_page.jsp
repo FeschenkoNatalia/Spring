@@ -10,11 +10,10 @@
 <div class="container">
     <form role="form" class="form-horizontal" action="/add" method="post">
         <div class="form-group"><h3>New transaction</h3></div>
-        <div class="form-group"><input type="text" class="form-control" name="transaction_date" placeholder="transaction_date"></div>
-        <div class="form-group"><input type="text" class="form-control" name="transaction_sum" placeholder="transaction_sum"></div>
-        <div class="form-group"><input type="text" class="form-control" name="transaction_desc" placeholder="transaction_desc"></div>
-        <div class="form-group">Sourcetypes<input type="text" name="sourcetypes"></div>
-        <div class="form-group">Transactionstypes<input type="text" name="transactionstypes"></div>
+        <div class="form-group"><input type="text" class="form-control" name="transaction_date" placeholder="transactions.transaction_date"></div>
+        <div class="form-group"><input type="text" class="form-control" name="transaction_sum" placeholder="transactions.transaction_sum"></div>
+        <div class="form-group"><input type="text" class="form-control" name="transaction_desc" placeholder="transactions.transaction_desc"></div>
+        <div class="form-group"><input type="text" class="form-control" name="transactionstypes.type" placeholder="transactions.transactionstypes.type"></div>
         <div class="form-group"><input type="submit" class="btn btn-primary" value="Add"></div>
     </form>
 </div>

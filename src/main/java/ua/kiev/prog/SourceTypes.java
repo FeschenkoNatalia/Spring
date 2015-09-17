@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
-@Table(name = "SourceTypes")
-public class SourceTypes {
+@Table(name = "Sourcetypes")
+public class Sourcetypes {
     @Id
     @GeneratedValue
     private long id;
@@ -19,10 +19,10 @@ public class SourceTypes {
     @JoinColumn(name = "user_id")
     private Users users;
 
-    public SourceTypes() {
+    public Sourcetypes() {
     }
 
-    public SourceTypes(String type, double source_sum, Users users) {
+    public Sourcetypes(String type, double source_sum, Users users) {
         this.type = type;
         this.source_sum = source_sum;
         this.users = users;
