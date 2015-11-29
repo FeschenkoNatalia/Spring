@@ -37,54 +37,54 @@
 			</div>
 		</spring:bind>
 
-		<spring:bind path="transaction_date">
+		<spring:bind path="transactionDate">
 			<div class="form-group ${status.error ? 'has-error' : ''}">
-				<label class="col-sm-2 control-label">Transaction_date</label>
+				<label class="col-sm-2 control-label">TransactionDate</label>
 				<div class="col-sm-10">
-					<form:input path="transaction_date" class="form-control" id="transaction_date" placeholder="transaction_date" />
-					<form:errors path="transaction_date" class="control-label" />
+					<form:input path="transactionDate" class="form-control" id="transactionDate" placeholder="transactionDate" />
+					<form:errors path="transactionDate" class="control-label" />
 				</div>
 			</div>
 		</spring:bind>
 
-		<spring:bind path="transaction_type">
+		<spring:bind path="transactionType">
 			<div class="form-group ${status.error ? 'has-error' : ''}">
-				<label class="col-sm-2 control-label">Transaction_type</label>
+				<label class="col-sm-2 control-label">TransactionType</label>
 				<div class="col-sm-10">
-					<form:select path="transaction_type" items="${transaction_typeList}" multiple="true" size="5" class="form-control" />
-					<form:errors path="transaction_type" class="control-label" />
-				</div>
-				<div class="col-sm-10"></div>
-			</div>
-		</spring:bind>
-
-		<spring:bind path="source_type">
-			<div class="form-group ${status.error ? 'has-error' : ''}">
-				<label class="col-sm-2 control-label">Source_type</label>
-				<div class="col-sm-10">
-					<form:select path="source_type" items="${source_typeList}" multiple="true" size="5" class="form-control" />
-					<form:errors path="source_type" class="control-label" />
+					<form:select path="transactionType" items="${transactionTypeList}" multiple="true" size="5" class="form-control" />
+					<form:errors path="transactionType" class="control-label" />
 				</div>
 				<div class="col-sm-10"></div>
 			</div>
 		</spring:bind>
 
-		<spring:bind path="source_sum">
+		<spring:bind path="sourceType">
 			<div class="form-group ${status.error ? 'has-error' : ''}">
-				<label class="col-sm-2 control-label">Source_sum</label>
+				<label class="col-sm-2 control-label">SourceType</label>
 				<div class="col-sm-10">
-					<form:textarea path="source_sum" class="form-control" id="source_sum" placeholder="source_sum" />
-					<form:errors path="source_sum" class="control-label" />
+					<form:select path="sourceType" items="${sourceTypeList}" multiple="true" size="5" class="form-control" />
+					<form:errors path="sourceType" class="control-label" />
+				</div>
+				<div class="col-sm-10"></div>
+			</div>
+		</spring:bind>
+
+		<spring:bind path="sourceSum">
+			<div class="form-group ${status.error ? 'has-error' : ''}">
+				<label class="col-sm-2 control-label">SourceSum</label>
+				<div class="col-sm-10">
+					<form:textarea path="sourceSum" class="form-control" id="sourceSum" placeholder="sourceSum" />
+					<form:errors path="sourceSum" class="control-label" />
 				</div>
 			</div>
 		</spring:bind>
 
-		<spring:bind path="transaction_desc">
+		<spring:bind path="transactionDesc">
 			<div class="form-group ${status.error ? 'has-error' : ''}">
-				<label class="col-sm-2 control-label">Transaction_desc</label>
+				<label class="col-sm-2 control-label">TransactionDesc</label>
 				<div class="col-sm-10">
-					<form:input path="transaction_desc" class="form-control" id="transaction_desc" placeholder="transaction_desc" />
-					<form:errors path="transaction_desc" class="control-label" />
+					<form:input path="transactionDesc" class="form-control" id="transactionDesc" placeholder="transactionDesc" />
+					<form:errors path="transactionDesc" class="control-label" />
 				</div>
 			</div>
 		</spring:bind>

@@ -31,28 +31,28 @@
 	</div>
 
 	<div class="row">
-		<label class="col-sm-2">Transaction_date</label>
-		<div class="col-sm-10">${transaction.transaction_date}</div>
+		<label class="col-sm-2">TransactionDate</label>
+		<div class="col-sm-10">${transaction.transactionDate}</div>
 	</div>
 
 	<div class="row">
-		<label class="col-sm-2">Transaction_type</label>
-		<div class="col-sm-10">${transaction.transaction_type}</div>
+		<label class="col-sm-2">TransactionType</label>
+		<div class="col-sm-10">${transaction.transactionType}</div>
 	</div>
 
 	<div class="row">
-		<label class="col-sm-2">Source_type</label>
-		<div class="col-sm-10">${transaction.source_type}</div>
+		<label class="col-sm-2">SourceType</label>
+		<div class="col-sm-10">${transaction.sourceType}</div>
 	</div>
 
 	<div class="row">
-		<label class="col-sm-2">Source_sum</label>
-		<div class="col-sm-10">${transaction.source_sum}</div>
+		<label class="col-sm-2">SourceSum</label>
+		<div class="col-sm-10">${transaction.sourceSum}</div>
 	</div>
 
 	<div class="row">
-		<label class="col-sm-2">Transaction_desc</label>
-		<div class="col-sm-10">${transaction.transaction_desc}</div>
+		<label class="col-sm-2">TransactionDesc</label>
+		<div class="col-sm-10">${transaction.transactionDesc}</div>
 	</div>
 
 </div>

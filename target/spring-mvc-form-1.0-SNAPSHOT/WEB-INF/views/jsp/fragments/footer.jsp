@@ -2,7 +2,7 @@
 <div class="container">
 	<hr>
 	<footer>
-		<p>&copy; Natalia_Feschenko.com 2015</p>
+		<p>&copy; Natalia Feschenko product 2015</p>
 	</footer>
 </div>
 

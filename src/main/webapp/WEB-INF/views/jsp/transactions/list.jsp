@@ -28,11 +28,11 @@
 				<tr>
 					<th>ID</th>
 					<th>User</th>
-					<th>Transaction_date</th>
-					<th>Transaction_type</th>
-					<th>Source_type</th>
-					<th>Source_sum</th>
-					<th>Transaction_desc</th>
+					<th>TransactionDate</th>
+					<th>TransactionType</th>
+					<th>SourceType</th>
+					<th>SourceSum</th>
+					<th>TransactionDesc</th>
 					<th>Action</th>>
 				</tr>
 			</thead>
@@ -43,11 +43,11 @@
 						${transaction.id}
 					</td>
 					<td>${transaction.user}</td>
-					<td>${transaction.transaction_date}</td>
-					<td>${transaction.transaction_type}</td>
-					<td>${transaction.source_type}</td>
-					<td>${transaction.source_sum}</td>
-					<td>${transaction.transaction_desc}</td>
+					<td>${transaction.transactionDate}</td>
+					<td>${transaction.transactionType}</td>
+					<td>${transaction.sourceType}</td>
+					<td>${transaction.sourceSum}</td>
+					<td>${transaction.transactionDesc}</td>
 					<td>
 						<spring:url value="/transactions/${transaction.id}" var="transactionUrl" />
 						<spring:url value="/transactions/${transaction.id}/delete" var="deleteUrl" />
